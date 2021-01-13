@@ -1,4 +1,4 @@
-# Flat.destroy_all
+Flat.destroy_all
 
 puts "Seeding DB:"
 print "\n Création reussie: '.'"
@@ -28,24 +28,23 @@ else
   end
 end
 
-flat2 = Flat.new(
-  name: 'Spacious Garden Flat London',
-  address: '13 Clifton Gardens London W9 1DT',
-  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
-  price_per_night: 100,
-  number_of_guests: 3
-)
-
+ flat2 = Flat.new(
+  name: 'St Pancras Clock Tower Guest Suite',
+  address: 'Euston Rd London N1C 4QP',
+  description: 'A mini apartment within the clock tower apartment at St Pancras Station, with its own en suite bathroom and kitchen and sitting area.',
+  price_per_night: 110,
+  number_of_guests: 2
+ )
 if flat2.save
    print('.')
 else
-  flat2 = Flat.where(name: "Spacious Garden Flat London").first
+  flat2 = Flat.where(name: "St Pancras Clock Tower Guest Suite").first
   if flat2
     print('-')
   else
     print('X')
   end
-end
+ end
 
 flat3 = Flat.new(
   name: 'Garden Flat London',
@@ -58,7 +57,7 @@ flat3 = Flat.new(
 if flat3.save
    print('.')
 else
-  flat3 = Flat.where(title: "Garden Flat London").first
+  flat3 = Flat.where(name: "Garden Flat London").first
   if flat3
     print('-')
   else
@@ -66,17 +65,17 @@ else
   end
 end
 flat4 = Flat.new(
-  name: 'Flat London',
-  address: '11 Clifton Gardens London W9 1DT',
-  description: 'A lovely summer feel for this spacious garden flat. Two double bedrooms, open plan living area, large kitchen and a beautiful conservatory',
-  price_per_night: 50,
-  number_of_guests: 4
+  name: 'Stylish House Close to River Thames',
+  address: '5 Queensmill Road London SW6 6JP',
+  description: 'Lovely warm comfortable and stylishly furnished house. Private bedroom and bathroom with shared living areas.',
+  price_per_night: 65,
+  number_of_guests: 2
 )
 
 if flat4.save
    print('.')
 else
-  flat4 = Flat.where(title: "Flat London").first
+  flat4 = Flat.where(name: "Stylish House Close to River Thames").first
   if flat4
     print('-')
   else
