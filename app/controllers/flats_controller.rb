@@ -17,9 +17,9 @@ class FlatsController < ApplicationController
   end
 
   def create 
-    @flat = Flat.new(Flats_params)
+    @flat = Flat.new(flat_params)
     if @flat.save
-      redirect_to_flats_path
+      redirect_to flats_path
     else
       render :new
     end
