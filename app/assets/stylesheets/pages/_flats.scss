@@ -17,10 +17,12 @@
 }
 
 .flat-card-image {
-  height: 180px;
+  height: 180px !important;
   background-position: center;
   background-size: cover;
   border: 1px solid black !important;
+
+  
 }
 
 .flat-card-content {
